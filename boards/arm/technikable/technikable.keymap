@@ -11,8 +11,8 @@
 
 #define QWERTY_BASE 1
 
-#define TBLE_ORTHO   true
-// #define TBLE_MIT     true
+// #define TBLE_ORTHO   true
+#define TBLE_MIT     true
 // #define TBLE_DUAL_2U true
 
 #define BAS_L 0
@@ -63,7 +63,7 @@
 #ifdef TBLE_DUAL_2U
                        &kp LCTRL  &kp LALT      &lt NAV_L SPACE                &lt NUM_L SPACE              &kp RALT    &kp RCTRL
 #elif defined(TBLE_MIT)
-                       &kp LCTRL  &kp LALT    &mo NAV_L          &kp SPACE                   &mo NUM_L      &kp RALT    &kp RCTRL
+                       &kp LCTRL  &kp LALT    &mo SYM_L          &kp SPACE                   &mo NUM_L      &kp RALT    &mo NAV_L
 #else
                        &kp LCTRL  &kp LALT    &mo NAV_L      &kp SPACE      &kp SPACE        &mo NUM_L      &kp RALT    &kp RCTRL
 #endif
@@ -89,9 +89,9 @@
         num_layer {
             label = "Num";
             bindings = <
-&trans     &kp LBKT   &kp N7     &kp N8      &kp N9    &kp RBKT    &kp C_PREV    &trans         &trans       &trans       &trans     &trans
-&trans     &kp MINUS  &kp N4     &kp N5      &kp N6    &kp EQUAL   &kp C_NEXT    &trans         &trans       &trans       &trans     &trans
-&trans     &kp GRAVE  &kp N1     &kp N2      &kp N3    &kp BSLH    &trans        &trans         &trans       &trans       &trans     &trans
+&trans     &kp N1  &kp N2     &kp N3      &kp N4    &kp N5    &kp N6    &kp N7         &kp N8       &kp N9       &kp N0     &kp BKSP
+&trans     &trans  &trans     &trans      &trans    &transL   &trans    &kp MINUS      &kp EQUAL       &kp LPAR       &kp RPAR     &trans
+&trans     &trans  &trans     &trans      &trans    &trans    &trans    &trans         &trans       &trans       &trans     &trans
 #ifdef TBLE_DUAL_2U
                      &trans     &kp N0              &trans                 &trans            &trans         &trans
 #elif defined(TBLE_MIT)
@@ -105,13 +105,13 @@
         sym_layer {
             label = "Sym";
             bindings = <
-&trans     &kp LBRC   &kp LS(N7) &kp LS(N8)  &kp LS(N9)   &kp RBRC     &trans     &trans    &trans       &trans       &trans     &trans
-&trans     &kp COLON  &kp LS(N4) &kp LS(N5)  &kp LS(N6)   &kp PLUS     &trans     &trans    &trans       &trans       &trans     &trans
-&trans     &kp TILDE  &kp LS(N1) &kp LS(N2)  &kp LS(N3)   &kp LS(BSLH) &trans     &trans    &trans       &trans       &trans     &trans
+&kp TILDE  &kp LS(N1)   &kp LS(N2) 	&kp LS(N3)  	&kp LS(N4)	&kp LS(N5)     	&kp LS(N6)	&kp LS(N7)	&kp LS(N8)	&kp LS(N9)	&kp LS(N0)	&kp BKSP
+&trans     &trans  	&trans 		&trans  	&trans   	&trans     	&trans     	&trans    	&kp PLUS       	&trans      	&trans     	&trans
+&trans     &trans  	&trans 		&trans  	&trans   	&trans 		&trans     	&trans    	&kp UP       	&trans       	&trans     	&trans
 #ifdef TBLE_DUAL_2U
                       &trans     &kp LS(N0)              &trans                    &trans       &trans         &trans
 #elif defined(TBLE_MIT)
-                      &trans     &kp LS(N0)      &trans                &trans             &trans      &trans   &trans
+                      &trans     &kp LS(N0)      &trans                &trans             &kp LEFT      &kp DOWN   &kp RIGHT
 #else
                       &trans     &kp LS(N0)      &trans          &trans       &trans    &trans  &trans         &trans
 #endif
