@@ -90,7 +90,7 @@
             label = "Num";
             bindings = <
 &trans     &kp N1  &kp N2     &kp N3      &kp N4    &kp N5    &kp N6    &kp N7         &kp N8       &kp N9       &kp N0     &kp BKSP
-&trans     &trans  &trans     &trans      &trans    &transL   &trans    &kp MINUS      &kp EQUAL       &kp LPAR       &kp RPAR     &trans
+&trans     &trans  &trans     &trans      &trans    &transL   &trans    &kp MINUS      &kp EQUAL    &kp LPAR     &kp RPAR   &trans
 &trans     &trans  &trans     &trans      &trans    &trans    &trans    &trans         &trans       &trans       &trans     &trans
 #ifdef TBLE_DUAL_2U
                      &trans     &kp N0              &trans                 &trans            &trans         &trans
@@ -105,7 +105,7 @@
         sym_layer {
             label = "Sym";
             bindings = <
-&kp TILDE  &kp LS(N1)   &kp LS(N2) 	&kp LS(N3)  	&kp LS(N4)	&kp LS(N5)     	&kp LS(N6)	&kp LS(N7)	&kp LS(N8)	&kp LS(N9)	&kp LS(N0)	&kp BKSP
+&kp TILDE  &kp LS(N1)   &kp LS(N2) 	&kp LS(N3) 	&kp LS(N4)	&kp LS(N5)     	&kp LS(N6)	&kp LS(N7)	&kp LS(N8)	&kp LS(N9)	&kp LS(N0)	&kp BKSP
 &trans     &trans  	&trans 		&trans  	&trans   	&trans     	&trans     	&trans    	&kp PLUS       	&trans      	&trans     	&trans
 &trans     &trans  	&trans 		&trans  	&trans   	&trans 		&trans     	&trans    	&kp UP       	&trans       	&trans     	&trans
 #ifdef TBLE_DUAL_2U
